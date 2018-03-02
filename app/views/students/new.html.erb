@@ -1,0 +1,14 @@
+<%= form_tag students_path do %>
+  <%= label_tag(:full_name, "Full name") %>
+  <%= text_field_tag(:full_name, nil, placeholder: "John Doe") %>
+
+  <%= label_tag(:email, "Email") %>
+  <%= text_field_tag(:email, nil, placeholder: "johndoe@gmail.com") %>
+
+  <%= label_tag(:grade_level, "Grade level") %>
+  <%= text_field_tag(:grade_level, nil, placeholder: "Freshman") %>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <%= submit_tag("Create student") %>
+<% end %>
